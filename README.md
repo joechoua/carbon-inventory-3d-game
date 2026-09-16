@@ -16,6 +16,9 @@
 - src/engine.js：3D 模型、車輛及步行動畫
 - assets/：角色圖與製作說明
 
-更新來源後依 learning、activities、engine 順序串接產生 game.js。
+更新來源後依 learning、activities、music、engine 順序串接產生 game.js。
 
 本版完成程式語法、部分關卡模擬與幾何距離檢查。手機、瀏覽器與動畫外觀仍需實機驗證。
+
+## 配樂
+原創 Web Audio 程序配樂，92 BPM，柔和撥弦式旋律與和弦；完成關卡播放提示音。第一次操作後播放，右上可靜音，切到背景暫停，偏好保存在本機。無外部音樂檔或取樣。

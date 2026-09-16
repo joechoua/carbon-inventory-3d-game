@@ -53,7 +53,7 @@ function checkArrival(){
  toast(`已抵達${tasks[active].name}，請點地標開始。`);
 }
 function feedback(text,ok=false){$('#activityFeedback').textContent=text;$('#activityFeedback').className='feedback '+(ok?'good':'');}
-function earn(i,text){if(stationDone(i))return;tasks[i].ids.forEach(id=>found.add(id));save();update();waterRunning=false;fuelRunning=false;feedback('✓ '+text,true);$('#exercise').querySelectorAll('button,input,select').forEach(e=>e.disabled=true);$('#reward').innerHTML='<button class="primary" id="seeCards">查看本區資料卡 →</button>';$('#seeCards').onclick=()=>showCards(i);$('#seeCards').focus();$('#interact').textContent=`${tasks[i].name}｜重看資料卡 →`;}
+function earn(i,text){if(stationDone(i))return;music.success();tasks[i].ids.forEach(id=>found.add(id));save();update();waterRunning=false;fuelRunning=false;feedback('✓ '+text,true);$('#exercise').querySelectorAll('button,input,select').forEach(e=>e.disabled=true);$('#reward').innerHTML='<button class="primary" id="seeCards">查看本區資料卡 →</button>';$('#seeCards').onclick=()=>showCards(i);$('#seeCards').focus();$('#interact').textContent=`${tasks[i].name}｜重看資料卡 →`;}
 function startActivity(i){
  waterRunning=false;fuelRunning=false;const head=`<div class="eyebrow">現場小任務 / ${i+1} OF 5</div><h2 id="dialogTitle">${activityNames[i]}</h2><p class="sub">數字就在現場紀錄上。看一眼、動手試試，答錯也可以重來。</p>`;
  const body=[
